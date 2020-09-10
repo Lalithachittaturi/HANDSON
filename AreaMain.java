@@ -1,59 +1,25 @@
-package Inheritance;
-
+package handson;
 import java.util.Scanner;
-
 public class AreaMain {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		double radius;
+		Scanner sc=new Scanner(System.in);
+		//AreaMain aa=new AreaMain();
 		double length;
 		double breadth;
-		double base;
-		double heigth;
-
-		Scanner s=new Scanner(System.in);
-		Shape sh=new Shape();
-		Circle c=new Circle();
-		Rectangle r=new Rectangle();
-		Triangle t=new Triangle();
-
-		System.out.println("enter shape:");
-
-		System.out.println("1. Circle");
-		System.out.println("2. Rectangle");
-		System.out.println("3. Triangle");
-		System.out.println("4. Invalid Choice");
-
-		int ch=s.nextInt();
-		if(ch==1) {
-
-			System.out.println("enter circle area:");
-			System.out.println("Enter the radius");
-			radius = s.nextDouble();
-			c.computeArea(radius);
-		}
-		if(ch==2) {
-
-			System.out.println("enter rectangle area:");
-			System.out.println("Enter the length and breadth:");
-			length= s.nextDouble();
-			breadth= s.nextDouble();
-			r.computeArea(length,breadth);
-		}
-
-
-		if(ch==3) {
-
-			System.out.println("enter triangle area:");
-			System.out.println("Enter the base and heigth:");
-			base= s.nextDouble();
-			heigth= s.nextDouble();
-			t.computeArea(base,heigth);
-		}
-		if(ch==4) {
-			System.out.println("Invalid Choice");
-		}
+		double side;
+		System.out.println("enter the length & breadth of rectangle:");
+		length=sc.nextDouble();
+		breadth=sc.nextDouble();
+		System.out.println("enter the side of Square:");
+		side=sc.nextDouble();
+		//Rectangle r=new Rectangle(length,breadth);
+		//Square s=new Square(side);
+		Polygon s1=new Rectangle(length, breadth);
+		Polygon s2=new Square(side);
+		s1.calcArea();
+		s1.calcPeri();
+		s2.calcArea();
+		s2.calcPeri();
 	}
 
 }
