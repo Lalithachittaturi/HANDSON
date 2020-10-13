@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="org.tech.Technology" name="tech1">
+		<property name="tid" value="1" />
+
+		<property name="name" value="java" />
+
+		<property name="description"
+			value="Java is a programming language" />
+
+		<property name="fee" value="10000" />
+
+	</bean>
+
+	<bean class="org.tech.Technology" name="tech2">
+
+		<property name="tid" value="2" />
+
+		<property name="name" value="python" />
+
+		<property name="description"
+			value="python is a programming language" />
+
+		<property name="fee" value="12000" />
+
+	</bean>
+
+	<bean class="org.tech.Technology" name="tech3">
+
+		<property name="tid" value="3" />
+
+		<property name="name" value=".net" />
+
+		<property name="description"
+			value=".net is a programming language" />
+
+		<property name="fee" value="10000" />
+
+	</bean>
+
+
+	<bean class="org.tech.Instructor" name="instructor">
+
+		<property name="id" value="1" />
+
+		<property name="name" value="ksrao" />
+
+
+		<property name="technologies">
+
+
+			<set>
+
+				<ref bean="tech1" />
+
+				<ref bean="tech2" />
+
+				<ref bean="tech3" />
+
+			</set>
+
+		</property>
+
+	</bean>
+
+</beans>
