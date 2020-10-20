@@ -8,15 +8,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.hcl.entity.Contact;
 @Controller
-@RequestMapping("/contact")
+
 public class ContactController {
-	@GetMapping("/")
-	public ModelAndView showPerson() {
-		ModelAndView mv=new ModelAndView("contact");
-		Map<String,Object> model=mv.getModel();
-		Contact p=new Contact();
-		model.put("p", p);
-		return mv;
+	@RequestMapping("/contact")
+	public String showContact() {
+				return "contact";
 
 	}
 }
