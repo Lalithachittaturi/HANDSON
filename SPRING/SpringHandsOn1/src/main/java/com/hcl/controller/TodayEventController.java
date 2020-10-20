@@ -10,14 +10,11 @@ import org.springframework.web.servlet.ModelAndView;
 import com.hcl.entity.TodayEvent;
 
 @Controller
-@RequestMapping("/TodayEvent")
+
 public class TodayEventController {
-	@GetMapping("/")
-	public ModelAndView showPerson() {
-		ModelAndView mv=new ModelAndView("TodayEvent");
-		Map<String,Object> model=mv.getModel();
-		TodayEvent p=new TodayEvent();
-		model.put("p", p);
-		return mv;
+	@RequestMapping("/TodayEvent")
+	public String showTodayEvent() {
+		
+		return "TodayEvent";
 	}
 }
